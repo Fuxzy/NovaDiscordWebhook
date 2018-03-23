@@ -1,4 +1,10 @@
-TemmieWebhook temmie = new TemmieWebhook("https://discordapp.com/api/webhooks/426544637327572992/UWo57d7ssh7n6l1PSixfRvMmTxme6C46DiGckIJx39Dzvq0dzj-tv20QE8LDY6JeaO-S");
-// Username, Content, Avatar URL
-DiscordMessage dm = new DiscordMessage("Temmie", "hOI, im TEMMIE!", "https://media.tenor.co/images/d205ef37ba5aad7b84fc21f6ffb36c6b/raw");
+TemmieWebhook temmie = new TemmieWebhook("Your Webhook URL here (Get it by going to your server configurations -> Webhook");
+DiscordEmbed de = new DiscordEmbed("Temmie", "Temmie (/ˈtɛ.miː/) is a species of monster in the Underground. They appear as a unique enemy in Waterfall, residents of Temmie Village, and the vendor of Tem Shop. ");
+ThumbnailEmbed te = new ThumbnailEmbed();
+te.setUrl("http://vignette3.wikia.nocookie.net/undertale/images/9/9c/Temmie.gif/revision/latest?cb=20151206115948");
+te.setHeight(96);
+te.setWidth(96);
+de.setThumbnail(te);
+DiscordMessage dm = new DiscordMessage("Temmie", "", "https://img04.deviantart.net/360e/i/2015/300/9/d/temmie_by_ilovegir64-d9elpal.png");
+dm.getEmbeds().add(de);
 temmie.sendMessage(dm);
